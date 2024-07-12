@@ -27,7 +27,7 @@ let App = () => {
     <div className="App">
       <PlayerInfoComponent points={points}/>
 
-      <QuestionComponent questions={questions}/>
+      <QuestionComponent questions={questions} setPoints={setPoints} points={points}/>
 
 
     </div>
