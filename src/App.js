@@ -1,10 +1,11 @@
 import './App.css';
 import { useState } from 'react';
-
+import QuestionComponent from './Components/QuestionComponent';
+import PlayerInfoComponent from './Components/PlayerInfoComponent';
 
 let App = () => {
   let [points, setPoints] = useState(0)
-  let [question, setQuestions] = useState([
+  let [questions, setQuestions] = useState([
     {
       text: "¿Cual es la capital de España?",
       options: ["Madrid", "Paris", "Berlin"],
@@ -24,7 +25,11 @@ let App = () => {
 
   return (
     <div className="App">
-      <h1>Trivial</h1>
+      <PlayerInfoComponent points={points}/>
+
+      <QuestionComponent questions={questions}/>
+
+
     </div>
   );
 }
